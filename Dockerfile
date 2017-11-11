@@ -17,9 +17,7 @@ RUN locale-gen "en_US.UTF-8" \
 RUN apt-get install -y software-properties-common \
 	&& apt-add-repository -y ppa:fkrull/deadsnakes-python2.7 \
 	&& apt-get update
-
-# Install libpython2.7; missing dependency in Tower setup
-RUN apt-get install -y libpython2.7
+	&& apt-get install -y libpython2.7-dev
 
 # create /var/log/tower
 RUN mkdir -p /var/log/tower
