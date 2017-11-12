@@ -16,9 +16,7 @@ RUN locale-gen "en_US.UTF-8" \
 # Use python >= 2.7.9
 RUN apt-get install -y software-properties-common \
 	&& apt-add-repository -y ppa:fkrull/deadsnakes-python2.7 \
-	&& apt-get update \
-	&& apt-get install -y libpython2.7-dev
-
+	&& apt-get update 
 # create /var/log/tower
 RUN mkdir -p /var/log/tower
 
